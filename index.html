@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maitri, will you marry me?</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#ffd6e0,#ffeef3);
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+  width:320px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  position:relative;
+}
+
+.yes{
+  background:#e84d73;
+  color:white;
+  padding:15px;
+  border-radius:12px;
+  font-size:18px;
+  cursor:pointer;
+  margin-bottom:30px;
+}
+
+.no{
+  background:#eee;
+  color:#666;
+  padding:10px;
+  border-radius:10px;
+  font-size:14px;
+  position:absolute;
+  left:110px;
+  top:210px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+  <h2>Maitri,<br>will you marry me? 💍❤️</h2>
+
+  <div class="yes" onclick="alert('She said YES!!! 💍❤️')">
+    Yes 💖
+  </div>
+
+  <div class="no" id="noBtn">No 🙈</div>
+</div>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+noBtn.addEventListener("mouseover", () => {
+  noBtn.style.left = Math.random()*220 + "px";
+  noBtn.style.top = Math.random()*220 + "px";
+});
+</script>
+
+</body>
+</html>
